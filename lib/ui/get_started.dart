@@ -9,10 +9,11 @@ class GetStarted extends StatelessWidget {
   Widget build(BuildContext context) {
     // ! Initaialize the Constant model
     Constants myConstants = Constants();
+
     Size size = MediaQuery.of(context).size;
 
     return Scaffold(
-      // !  Since we don't need it
+      // !  Since we don't need it.
       // appBar: AppBar(
       //   title: const Text("Clima Cast"),
       // ),
