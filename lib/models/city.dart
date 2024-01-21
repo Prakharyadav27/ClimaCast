@@ -1,14 +1,10 @@
-class City {
+class City{
   bool isSelected;
-  final bool isDefault;
   final String city;
   final String country;
+  final bool isDefault;
 
-  City(
-      {required this.isSelected,
-      required this.isDefault,
-      required this.city,
-      required this.country});
+  City({required this.isSelected, required this.city, required this.country, required this.isDefault});
 
   //List of Cities data
   static List<City> citiesList = [
@@ -16,19 +12,37 @@ class City {
         isSelected: false,
         city: 'London',
         country: 'United Kindgom',
+        isDefault: true),
+    City(
+        isSelected: false,
+        city: 'Tokyo',
+        country: 'Japan',
         isDefault: false),
-    City(isSelected: false, city: 'Tokyo', country: 'Japan', isDefault: false),
-    City(isSelected: false, city: 'Delhi', country: 'India', isDefault: true),
     City(
-        isSelected: false, city: 'Beijing', country: 'China', isDefault: false),
-    City(isSelected: false, city: 'Paris', country: 'Paris', isDefault: false),
-    City(isSelected: false, city: 'Rome', country: 'Italy', isDefault: false),
+        isSelected: false,
+        city: 'Delhi',
+        country: 'India',
+        isDefault: false),
     City(
-      isSelected: false,
-      city: 'Lagos',
-      country: 'Nigeria',
-      isDefault: false,
-    ),
+        isSelected: false,
+        city: 'Beijing',
+        country: 'China',
+        isDefault: false),
+    City(
+        isSelected: false,
+        city: 'Paris',
+        country: 'Paris',
+        isDefault: false),
+    City(
+        isSelected: false,
+        city: 'Rome',
+        country: 'Italy',
+        isDefault: false),
+    City(
+        isSelected: false,
+        city: 'Lagos',
+        country: 'Nigeria',
+        isDefault: false),
     City(
         isSelected: false,
         city: 'Amsterdam',
@@ -65,12 +79,39 @@ class City {
         country: 'Belgium',
         isDefault: false),
     City(
-        isSelected: false, city: 'Nairobi', country: 'Kenya', isDefault: false),
+        isSelected: false,
+        city: 'Nairobi',
+        country: 'Kenya',
+        isDefault: false),
   ];
 
-  // Get the Selected cities
-  static List<City> getSelectedCities() {
-    List<City> selectedcities = City.citiesList;
-    return selectedcities.where((city) => city.isSelected == true).toList();
+  //Get the selected cities
+  static List<City> getSelectedCities(){
+    List<City> selectedCities = City.citiesList;
+    return selectedCities
+        .where((city) => city.isSelected == true)
+        .toList();
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
