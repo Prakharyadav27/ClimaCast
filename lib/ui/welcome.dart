@@ -1,5 +1,6 @@
 import 'package:clima_cast/models/city.dart';
 import 'package:clima_cast/models/constants.dart';
+import 'package:clima_cast/ui/homePage.dart';
 import 'package:flutter/material.dart';
 
 class Welcome extends StatefulWidget {
@@ -85,7 +86,8 @@ class _WelcomeState extends State<Welcome> {
         child: FloatingActionButton(
           shape: CircleBorder(),
           onPressed: () {
-            print(selectedCities.length);
+            Navigator.pushReplacement(
+                context, MaterialPageRoute(builder: (context) => HomePage()));
           },
           backgroundColor: myConstants.secondaryColor,
           child: const Icon(
